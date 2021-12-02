@@ -1,7 +1,7 @@
 from sys import maxsize
 
 def main():
-    with open('data/depth-measurements.txt', 'r') as a_file:
+    with open('../data/depth-measurements.txt', 'r') as a_file:
         depth_increases = 0
         last_measurement = maxsize
         for line in a_file:
