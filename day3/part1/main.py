@@ -7,17 +7,15 @@ def main():
 
         for line_untrimmed in file:
             line = line_untrimmed.strip()
-            
-            if line.isdigit():
-                total_lines += 1
+            total_lines += 1
 
-                if initialized:
-                    for i, bitstr in enumerate(list(line)):
-                        bitcount[i] += int(bitstr)
-                else:
-                    initialized = True
-                    for bitstr in list(line):
-                        bitcount.append(int(bitstr))
+            if initialized:
+                for i, bitstr in enumerate(list(line)):
+                    bitcount[i] += int(bitstr)
+            else:
+                initialized = True
+                for bitstr in list(line):
+                    bitcount.append(int(bitstr))
 
         print("Total lines: " + str(total_lines))
         print("Bitcount: " + str(bitcount))
