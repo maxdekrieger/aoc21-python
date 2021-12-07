@@ -11,7 +11,7 @@ def main():
         for target in range(lowest, highest + 1):
             fuel = 0
             for pos in original_positions:
-                required = (target - pos) if target > pos else (pos - target)
+                required = abs(target - pos)
                 fuel += required
             lowest_fuel_cost = fuel if fuel < lowest_fuel_cost else lowest_fuel_cost 
 
