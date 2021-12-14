@@ -25,8 +25,7 @@ def main():
                 if pair in rules:
                     new_polymer += rules[pair]
             polymer = new_polymer + polymer[len(polymer) - 1]
-            # print('After step ' + str(step) + ':\t\t' + polymer)
-            print('done with step ' + str(step))
+            print('After step ' + str(step) + ':\t\t' + polymer)
 
         element_counts: dict[str, int]= {}
         for e in list(polymer):
